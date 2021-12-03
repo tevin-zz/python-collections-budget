@@ -11,9 +11,10 @@ for expense in expenses.list:
 
 spending_counter = collections.Counter(spending_categories)
 
-print(spending_counter.most_common(5))
+#print(spending_counter.most_common(5))
+top5=spending_counter.most_common(5)
 
-categories, count = zip(*spending_counter.most_common(5))
+categories, count = zip(*top5)
 
 fig, ax = plt.subplots()
 ax.bar(categories,count)
